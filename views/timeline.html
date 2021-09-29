@@ -1,0 +1,59 @@
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}{{ 'Timeline' }}{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/timeline.css">
+{{/block}}
+
+{{block 'body'}}
+<div class="maindiv">
+  <ur class="articlesur">
+    {{ each article }}
+      <li><span class="titleid">{{ $value.id }}</span><span class="title">{{ $value.title }}</span><br><span class="preview">{{@ $value.content }}</span><br><span class="time">{{ $value.release_time }}</span></li>
+    {{ /each }}
+  </ur>
+</div>
+<div class="gototop">
+  <a href="#"><img src="/public/img/gototop.png" alt=""></a>
+</div>
+{{/block}}
+
+{{block 'script'}}
+<script type="text/javascript">
+      $(function(){
+        $('.nav li').eq(1).addClass('choosed')
+
+        $('.articlesur li').click(function(){
+            var $titleid = $(this).children('.titleid').text()
+            var url = '/article/?id=' + $titleid
+            window.location.href = url
+        })
+
+        $('.preview').each(function(index, element){
+          var prev = $(this).find('p').eq(0).text()
+          $(this).text(prev)
+        })
+
+        $('.time').each(function(index, element){
+          var tim = $(this).text()
+          var strTime = ''
+          for(var i = 1; i < 11; ++i){
+            strTime += tim[i]
+          }
+          $(this).text(strTime)
+        })
+
+        $(window).scroll(function(){
+          if($(window).scrollTop() >= 200)
+          {
+            $('.gototop').stop(true, true).fadeIn(3000)
+          }
+          else
+          {
+            $('.gototop').stop(true, true).fadeOut(1000)
+          }
+        })
+    });
+</script>
+{{/block}}s

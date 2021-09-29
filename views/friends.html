@@ -1,0 +1,24 @@
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}{{ 'Friends' }}{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/friends.css">
+{{/block}}
+
+{{block 'body'}}
+<div class="frientsdiv">
+    暂无信息，如有需要，可以邮箱联系。
+    <ui class="fui">
+        <li><a href="#">Tese</a></li>
+    </ui>
+</div>
+{{/block}}
+
+{{block 'script'}}
+<script type="text/javascript">
+      $(function(){
+        $('.nav li').eq(3).addClass('choosed')
+    });
+</script>
+{{/block}}

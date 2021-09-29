@@ -1,0 +1,67 @@
+.myform{
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #bfa;
+}
+
+#send_msg_form{
+    margin: 10px auto;
+    padding: 20px;
+}
+
+#send_msg_form input{
+    width: 300px;
+    height: 30px;
+    border: 2px solid rgba(255, 215, 0, 0.8);
+    background-color: rgba( 255, 255, 240, 0.8);
+}
+
+.formname{
+
+}
+
+.formmesg{
+
+}
+
+.form_group{
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#nick_id{
+    display: none;
+    font-size: 14px;
+    color: red;
+}
+
+#msg_id{
+    display: none;
+    font-size: 14px;
+    color: red;
+}
+
+.btn{
+    height: 40px;
+    width: 120px;
+    margin: 10px 0px;
+    background: rgba(0, 191 ,255, 0.8);
+    border-radius: 20px;
+    border:1px solid rgba(10, 124, 235, 0.8);
+}
+
+.btn:hover{
+    background: rgba(30, 144, 255, 0.8);
+}
+
+.send-btn{
+    position: relative;
+    left: 180px;
+}
+.quit-btn{
+    position: relative;
+    left: 240px;
+}

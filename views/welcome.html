@@ -1,0 +1,22 @@
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}} {{ 'Welcome' }} {{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/welcome.css">
+{{/block}}
+
+{{block 'body'}}
+<div class="maindiv">
+    <p class="hello">这或许是一个个人博客，但是目前还在开发中。。。</p>
+</div>
+{{/block}}
+
+{{block 'script'}}
+<!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
+<script type="text/javascript">
+      $(function(){
+        $('.nav li').eq(0).addClass('choosed')
+    });
+</script>
+{{/block}}s

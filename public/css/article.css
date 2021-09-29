@@ -1,0 +1,84 @@
+
+*{
+    margin:0;
+    padding:0;
+    /*list-style: none;*/
+    /*-moz-user-select:none;*/
+    /*-webkit-user-select:none;*/
+    /*user-select:none;*/
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    user-select: text;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+}
+
+.hljs li{
+    /*list-style: none;*/
+}
+
+
+.retbtn{
+    width: 4%;
+    height: 4%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.retbtn img
+{
+    width: 100%;
+    height: auto;
+}
+
+.titlediv{
+    height: auto;
+    padding: 10px
+    margin: 10px auto;
+    border: 1px solid red;
+}
+
+.titlediv h1{
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    line-height: auto
+}
+
+.markdown-body{
+    padding: 5px 5px;
+    font-size: 1em;
+}
+
+.inor-content{
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #bfa;
+}
+
+.main-div{
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(120, 140, 150, 0.6);
+    background-color: rgba(245, 245, 245, 0.9);
+    box-shadow: 8px 8px 4px rgba(100, 100, 100, 0.8);
+}
+
+.about-time{
+    height: auto;
+    line-height: 40px;
+    text-align: center;
+    padding: 5px;
+    color: rgba(50,50,50,0.8);
+}

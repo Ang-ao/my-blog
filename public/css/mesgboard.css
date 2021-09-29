@@ -1,0 +1,68 @@
+.fabu{
+    width: 1905px;
+}
+
+.liuyank{
+    height: 60px;
+    width: 240px;
+    margin: 0 auto;
+}
+
+#sendBtn{
+    height: 50px;
+    width: 240px;
+    margin: 5px auto;
+    font-size: 20px;
+    /*直角变圆角*/
+    border-radius: 20px;
+    background: rgba(135, 206, 250, 0.8);
+    border:1px solid rgba(0, 255, 255, 0.8);
+}
+#sendBtn:hover{
+    background: rgba(0, 191, 255, 0.8);
+}
+
+#nick_id{
+    display: none;
+    color: red;
+}
+
+#msg_id{
+    display: none;
+    color: red;
+}
+
+.fgx{
+    height: 5px;
+    width: 100%;
+    background: rgb(255, 255, 255)
+}
+
+.media{
+    width: 1200px;
+    line-height: 50px;
+    margin: 5px auto;
+    border-radius: 50px;
+    padding: 10px;
+    background: rgba(180, 80, 20, 0.2);
+}
+.media-body{
+    padding: 2px;
+}
+.fb_msg{
+    font-size: 18px;
+}
+.fb_name{
+    color: rgba(250, 50, 50, 0.8);
+    font-size: 20px;
+}
+.fb_nr{
+    color: rgba(10, 10, 10, 0.8);
+}
+.fb_time{
+    color: rgba(40, 40, 40, 0.8);
+    font-size: 16px;
+    position: relative;
+    left: 1080px;
+}
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{block 'title'}}{{/block}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  {{block 'head'}}{{/block}}
+</head>
+
+<body style = "background: url(/public/img/background.png) 0% 0% / cover no-repeat fixed;">
+  {{include '../_partials/header.html'}}
+  <!-- set nav -->
+  <ul class="nav">
+    <li>
+      <a href="/welcome">Welcome</a>
+    </li>
+    <li>
+      <a href="/timeline">TimeLine</a>
+    </li>
+    <li>
+        <a href="/about">About</a>
+    </li>
+    <li>
+        <a href="/friends">Friends</a>
+    </li>
+  </ul>
+  {{block 'body'}}{{/block}}
+  {{include '../_partials/footer.html'}}
+
+</body>
+{{block 'script'}}{{/block}}
+
+<script type="text/javascript">
+    var $body = $('body')
+
+    function fontVCenter(){
+      var hW = $body.width() // 获取网页的宽
+      var $nava = $('.nav a')
+      var $title = $('.title')
+      var fontSize // heml 字体
+      var navheig // nav 字体
+      var titleheig // title 字体
+
+      if(hW > 1400){
+          fontSize = 16
+          navheig = 50
+          titleheig = 100
+      }
+      else if(hW > 700) {
+          fontSize = 16 * hW / 1400
+          navheig = 50 * hW / 1400
+          titleheig = 100 * hW / 1400
+      }
+      else {
+        fontSize = 6
+        navheig = 25
+        titleheig = 50
+      }
+
+      $body.css('font-size', fontSize + 'px') // 更新字体大小
+      $nava.css('line-height', navheig + 'px') // 更新 nav 字体居中
+      $title.css('line-height', titleheig + 'px') // 更新 title 字体居中
+      $('footer').css('line-height', titleheig + 'px') // 更新 footer 字体居中
+    }
+    fontVCenter();
+
+    // 当窗口大小改变时执行函数 
+    window.onresize = function(){
+      fontVCenter()
+    }
+</script>
+
+</html>

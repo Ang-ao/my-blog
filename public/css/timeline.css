@@ -1,0 +1,54 @@
+.maindiv{
+    width: 70%;
+}
+.articlesur{
+    width: 100%;
+}
+
+.articlesur li{
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #bfa;
+    border-radius:20px;
+}
+
+.articlesur li:hover{
+    background-color: rgba(200, 50, 0, 0.5);
+    cursor:pointer;
+}
+
+.releasetime{
+    display: none;
+}
+
+.articlesur .titleid{
+    display: none;
+}
+
+.articlesur .title{
+    display: block;
+    overflow:hidden;
+    height: auto;
+    color: rgba(20, 20, 20, 0.8);
+    font-size: 1.125em;
+    font-weight:bold;
+}
+
+.articlesur .preview{
+    display: block;
+    width: 90%;
+    height: auto;
+    color: rgba(80, 80, 80, 0.8);
+    overflow:hidden;
+    font-size: 0.875em;
+}
+
+.articlesur .time{
+    color: rgba(20, 20, 20, 0.8);
+    font-size: 1em;
+    position: relative;
+    left: 80%;
+    bottom:20%;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <meta charset="UTF-8">
+  <title>{{block 'title'}}{{/block}}</title>
+   <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/article.css">
+  <link rel="stylesheet" href="/public/css/github-markdown.css">
+  <link rel="stylesheet" href="/public/css/pilcrow.css">
+  <link rel="stylesheet" href="/public/css/hljs-github.min.css"/>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+
+ 
+
+
+  {{block 'head'}}{{/block}}
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/vue/dist/vue.min.js"></script>
+<style>
+  pre.hljs {
+    padding: 8px 2px;
+    border-radius: 5px;
+    position: relative;
+    ol {
+      list-style: decimal;
+      margin: 0;
+      margin-left: 40px;
+      padding: 0;
+      li {
+        list-style: decimal-leading-zero;
+        position: relative;
+        padding-left: 10px;
+        .line-num {
+          position: absolute;
+          left: -40px;
+          top: 0;
+          width: 40px;
+          height: 100%;
+          border-right: 1px solid rgba(0, 0, 0, .66);
+        }
+      }
+    }
+    b.name {
+      position: absolute;
+      top: 2px;
+      right: 12px;
+      z-index: 10;
+      color: #999;
+      pointer-events: none;
+    }
+  }
+  </style>
+</head>
+
+<body style = "background: url(/public/img/background.png) 0% 0% / cover no-repeat fixed;">
+  {{include '../_partials/header.html'}}
+  {{block 'body'}}{{/block}}
+  {{include '../_partials/footer.html'}}
+  {{block 'script'}}{{/block}}
+</body>
+
+<!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
+</html>

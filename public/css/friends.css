@@ -1,0 +1,17 @@
+.frientsdiv{
+    width: 50%;
+    margin: 160px auto;
+    padding: 20px;
+    border: 2px solid rgba(120, 140, 150, 0.8);
+    background-color: rgba(245, 245, 245, 0.9);
+    box-shadow: 8px 8px 4px rgba(100, 100, 100, 0.9);
+    border-radius: 10px;
+}
+
+.fui li{
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 4px solid #bfa;
+    border-radius: 10px;
+}

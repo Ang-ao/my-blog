@@ -1,0 +1,104 @@
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    /*user-select:none;*/
+    user-select: text;  
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+}
+
+.header{
+    width: 100%;
+    height: auto;
+    background: rgba(50, 150, 200, 0.8);
+}
+
+.header .title{
+    text-align: center;
+    font-size: 2em;
+}
+
+/* set nav size */
+.nav{
+    width: 60%;
+    height: auto;
+    background-color: rgba(50,200,200,0.6);
+    margin:10px auto;
+    border: 2px solid red;
+    display: flex;
+    border-radius: 4px;
+}
+
+.nav li{
+    flex-grow: 1;
+}
+
+.nav a{
+    height: auto;
+    line-height: 50px;
+    padding: 1px 0;
+    min-height: 20px;
+    display: block;
+    text-decoration: none;
+    color: rgba(250,50,50,0.8);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.nav a:hover{
+    background-color: rgba(250,50,50,0.5);
+    color: rgba(50,200,200,0.6);
+}
+
+.choosed a{
+    background-color: rgba(250,50,50,0.5);
+    color: rgba(50,200,200,0.6);
+}
+
+.maindiv{
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(120, 140, 150, 0.6);
+    background-color: rgba(245, 245, 245, 0.9);
+    box-shadow: 8px 8px 4px rgba(100, 100, 100, 0.8);
+}
+
+.gototop{
+    width: 8%;
+    height: auto;
+    position: fixed;
+    bottom: 100px;
+    right: 1%;
+    display: none;
+}
+
+.gototop img
+{
+    width: 100%;
+    height: auto;
+}
+
+.footer{
+    height: auto;
+    width: 100%;
+    background: rgba(180,180,180,0.2);
+    bottom: 0;
+}
+
+.footer-cont{
+    width: 80%;
+    padding: 0px 10px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 2em;
+    color:rgb(125);
+}

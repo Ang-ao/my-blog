@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-art-template": "^1.0.1",
+    "highlight.js": "^10.7.2",
+    "jquery": "^3.6.0",
+    "log4js": "^6.3.0",
+    "markdown-it": "^12.0.6",
+    "markdown-it-emoji": "^2.0.0",
+    "markdown-it-github-headings": "^2.0.0",
+    "markdown-it-toc": "^1.1.0",
+    "mongoose": "^2.9.10",
+    "serve-favicon": "^2.5.0",
+    "vue": "^2.6.12"
+  }
+}

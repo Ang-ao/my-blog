@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <meta charset="UTF-8">
+  <title>{{ article.title }}</title>
+
+  <link rel="stylesheet" href="/public/css/github-markdown.css">
+  <link rel="stylesheet" href="/public/css/pilcrow.css">
+  <link rel="stylesheet" href="/public/css/hljs-github.min.css"/>
+  <link rel="stylesheet" href="/public/css/atom-one-dark.css"/>
+
+  <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/article.css">
+
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/vue/dist/vue.min.js"></script>
+<style>
+  pre.hljs {
+    padding: 8px 2px;
+    border-radius: 5px;
+    position: relative;
+    ol {
+      list-style: decimal;
+      margin: 0;
+      margin-left: 40px;
+      padding: 0;
+      li {
+        list-style: decimal-leading-zero;
+        position: relative;
+        padding-left: 10px;
+        .line-num {
+          position: absolute;
+          left: -40px;
+          top: 0;
+          width: 40px;
+          height: 100%;
+          border-right: 1px solid rgba(0, 0, 0, .66);
+        }
+      }
+    }
+    b.name {
+      position: absolute;
+      top: 2px;
+      right: 12px;
+      z-index: 10;
+      color: #999;
+      pointer-events: none;
+    }
+  }
+  </style>
+</head>
+
+<body style = "background: url(/public/img/background.png) 0% 0% / cover no-repeat fixed;">
+  {{include './_partials/header.html'}}
+  <div class="retbtn"><a href="/timeline"><img src="/public/img/return.png" alt=""></a></div>
+<div class="main-div">
+    <div class="titlediv">
+        <h1 class="title">
+            {{ article.title }}
+        </h1>
+    </div>
+    <article class="markdown-body">
+    <div class="inor-content">
+        {{@ article.content }}
+    </div>
+    </article>
+    <div class="about-time">Published in <span class="time">{{ article.release_time }}</span> , Modified on <span class="time">{{ article.edit_time }}</span></div>
+</div>
+<div class="gototop">
+  <a href="#"><img src="/public/img/gototop.png" alt=""></a>
+</div>
+  {{include './_partials/footer.html'}}
+</body>
+
+<script type="text/javascript">
+      $(function(){
+        $('.time').each(function(index, element){
+          var tim = $(this).text()
+          var strTime = ''
+          for(var i = 1; i < 11; ++i){
+            strTime += tim[i]
+          }
+          $(this).text(strTime)
+        })
+        
+        $(window).scroll(function(){
+          if($(window).scrollTop() >= 200)
+          {
+            $('.gototop').stop().fadeIn(2000)
+          }
+          else
+          {
+            $('.gototop').stop().fadeOut(1000)
+          }
+        })
+    });
+</script>
+
+<script type="text/javascript">
+    var $body = $('body')
+
+    function fontVCenter(){
+      var hW = $body.width() // 获取网页的宽
+      var $nava = $('.nav a')
+      var $title = $('.title')
+      var fontSize // heml 字体
+      var navheig // nav 字体
+      var titleheig // title 字体
+
+      if(hW > 1400){
+          fontSize = 16
+          navheig = 50
+          titleheig = 100
+      }
+      else if(hW > 700) {
+          fontSize = 16 * hW / 1400
+          navheig = 50 * hW / 1400
+          titleheig = 100 * hW / 1400
+      }
+      else {
+        fontSize = 6
+        navheig = 25
+        titleheig = 50
+      }
+
+      $body.css('font-size', fontSize + 'px') // 更新字体大小
+      $nava.css('line-height', navheig + 'px') // 更新 nav 字体居中
+      $title.css('line-height', titleheig + 'px') // 更新 title 字体居中
+      $('footer').css('line-height', titleheig + 'px') // 更新 footer 字体居中
+    }
+    fontVCenter();
+
+    // 当窗口大小改变时执行函数 
+    window.onresize = function(){
+      fontVCenter()
+    }
+</script>
+
+<!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
+</html>
